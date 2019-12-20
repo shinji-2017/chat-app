@@ -1,0 +1,29 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header__user
+      .side-bar__header__user-image
+        = image_tag "member_photo.png", size: "50x50"
+      %p.side-bar__header__user-name
+        yamaguchi shinji
+    .fukidasi
+      .fukidasi-box
+        %p.profile
+          プロフィール編集
+  .side-bar__search 
+    .side-bar__search-box
+      = icon("fa", "search")
+      %p.side-bar__search-box-value 
+        トークルームとメッセージ検索
+  .side-bar-chat
+    = link_to "#", class: "side-bar" do
+      .side-bar__chat
+        .side-bar__chat-image
+          = image_tag "member_photo.png", size: "50x50"
+        .side-bar__chat-contents
+          .side-bar__chat-contents-sell
+            %p.side-bar__chat-contents-sell-name
+              shinji
+            %span 午後　10:58
+          %P.side-bar__chat-contents-text
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  = render "add-btn"

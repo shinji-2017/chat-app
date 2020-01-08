@@ -1,19 +1,23 @@
 .side-bar
   .side-bar__header
-    .side-bar__header__user
-      .side-bar__header__user-image
-        = image_tag "member_photo.png", size: "50x50"
-      %p.side-bar__header__user-name
-        yamaguchi shinji
-    .fukidasi
-      .fukidasi-box
-        %p.profile
-          プロフィール編集
+    = link_to{"#", class: "user"}  do
+      .side-bar__header__user
+        .side-bar__header__user-image
+          = image_tag "member_photo.png", size: "50x50"
+        %p.side-bar__header__user-name
+          = current_user.name
+      .fukidasi
+        .fukidasi-box
+          %p.profile
+            アカウント編集
   .side-bar__search 
     .side-bar__search-box
       = icon("fa", "search")
       %p.side-bar__search-box-value 
         トークルームとメッセージ検索
+  -# .side-bar-title
+  -#   %P.side-bar-title-talk
+  -#     トークルーム
   .side-bar-chat
     = link_to "#", class: "side-bar" do
       .side-bar__chat

@@ -115,11 +115,10 @@
       text-decoration: none;
       color: #D1D2D3;
       display: block;
-      padding: 30px 8px;
       &__chat {
        display: flex;
        justify-content: space-between;
-       padding: 10px 0;
+       padding: 10px 8px;
         &-image {
           img {
             border-radius: 50%;
@@ -203,13 +202,93 @@
   }
   &-chat {
     border-top: 1px solid #36373C;
-    height: calc(100vh - 80px - 80px);
+    height: calc(100vh - 80px - 90px);
     overflow: scroll;
     background-color: #1a1e21;
+    .messages {
+      padding: 20px;
+      .message {
+        display: flex;
+        width: 100%;
+        margin: 20px 0 ;
+        &:hover {
+          background-color: #232529;
+        }
+        &-image {
+          img {
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+        &-box {
+          margin-left: 6px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .image {
+            margin-top: 10px;
+          }
+          &-box {
+            display: flex;
+            &-name {
+              color: #D1D2D3;
+              font-weight: bold;
+              &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+            &-data {
+              margin-left: 3px;
+              color: #656668;
+              font-size: 14px;
+            }
+          }
+          &-content {
+            width: 600px;
+            color: #c8c8c9;
+            p {
+              word-wrap: break-word;
+            }
+          }
+        }
+      }
+    }
   }
-  &-form {
-    height: 80px;
-    background-color: #1a1e21;
+  
+  // フォーム
+  .form {
+    background-color:#222629;
+    height: 90px;
+    padding:20px;
+    .message-box {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      &-text {
+        padding: 0 40px 0 10px;
+        height: 100%;
+        width: 100%;
+        background-color: #36373C;
+        color: #D1D2D3;
+        border-radius: 5px;
+        border: 1px solid white;
+        &:focus {
+          outline: 0;
+        }
+      }
+     .edit-btn {
+       display: block;
+       width: 100px;
+       height: 50px;
+       padding: 0 30px;
+       margin-left: 15px;
+       cursor: pointer;  
+       background-color: #36373C;
+       color: #D1D2D3;
+       border-radius: 5px;
+     }
+    }
   } 
 
 }

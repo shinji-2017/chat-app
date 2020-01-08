@@ -14,4 +14,22 @@
       .main-chat-header-box-edit
         = icon("fa", "cog")
   .main-chat-chat
-  .main-chat-form
+    .messages 
+      .message
+        .message-image 
+          = image_tag "member_photo.png", size: "50x50"
+        .message-box
+          .message-box-box
+            .message-box-box-name
+              %p shinji
+            .message-box-box-data
+              %p 15:06
+          .message-box-content
+            %p aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          = image_tag "member_photo.png", size: "200x200", class: "image"
+     
+  .form
+    .message-box
+      %input{placeholder: "groupnameへのメッセージ",class: "message-box-text"}
+      %input{type: "submit", value: "送信", class: "edit-btn"}
+      

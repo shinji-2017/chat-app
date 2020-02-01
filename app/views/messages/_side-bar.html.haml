@@ -1,15 +1,22 @@
 .side-bar
   .side-bar__header
-    = link_to{"#", class: "user"}  do
-      .side-bar__header__user
-        .side-bar__header__user-image
-          = image_tag "member_photo.png", size: "50x50"
-        %p.side-bar__header__user-name
-          = current_user.name
-      .fukidasi
-        .fukidasi-box
-          %p.profile
-            アカウント編集
+    .side-bar__header__user
+      .side-bar__header__user-image
+        = image_tag "member_photo.png", size: "50x50"
+      %p.side-bar__header__user-name
+        = current_user.name
+    .fukidasi
+      .fukidasi-box
+        %p.profile
+          アカウント編集
+  .profile
+    = image_tag "member_photo.png", size: "50x50", class: "profile-image"
+    %p.profile-user
+      = current_user.name
+    .logout-btn
+      = form_for(@user,url: destroy_user_session_path ,method: :delete) do |f|
+        = f.submit "ログアウト", class: "logout-btn"
+    %p.close-btn　閉じる
   .side-bar__search 
     .side-bar__search-box
       = icon("fa", "search")
@@ -31,3 +38,4 @@
           %P.side-bar__chat-contents-text
             aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   = render "add-btn"
+

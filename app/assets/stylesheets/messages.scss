@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+
+// サイドバー
+.side-bar {
+  background-color: #19171D;
+  color: #D1D2D3;
+  width: 300px;
+  float: left;
+  &__header{
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+    position: relative;
+    a {
+      text-decoration: none;
+    }
+    &__user {
+      font-weight: bold;
+      color: #D1D2D3;     
+      width: 100%;
+      height: 100%;
+      padding: 10px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-name {
+        width: 100%;
+      }
+      img {
+        border-radius: 50%;
+      }
+    }
+    :hover  {
+      background-color: #131018;
+      color: white;
+    }
+    :hover + .fukidasi {
+      display: block;
+    }
+    
+  }
+  .profile-edit {
+    text-decoration: none;
+  }
+  .profile {
+    width: 250px;
+    padding: 12px 0;
+    background-color: #222429;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    height: 500px;
+    top: 80px;
+    left: 10px;
+    border-radius: 5px;
+    .edit {
+      color: #999A9B;
+      font-size: 20px;
+    }
+    .close-btn {
+      cursor: pointer;
+    }
+    .logout-btn {
+      cursor: pointer;
+    }
+  }
+
+  // 検索画面
+  &__search {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    &-box {
+      height: 30px;
+      position: relative;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #39393e;
+      width: 250px;
+      cursor: pointer;
+      & i {
+        position: absolute;
+        right: 15px;
+        top: 7px;
+      }
+      &-value {
+        text-align: center;
+        margin-left: 6px;
+      font-size: 14px;
+      }
+      &:hover {
+        background-color: #454448;
+      }
+    }
+  }
+
+
+  // チャット画面
+  .side-bar-chat {
+    height: calc(100vh - 80px - 50px);
+      overflow: scroll;
+    .side-bar {
+      text-decoration: none;
+      color: #D1D2D3;
+      display: block;
+      &__chat {
+       display: flex;
+       justify-content: space-between;
+       padding: 10px 8px;
+        &-image {
+          img {
+            border-radius: 50%;
+          }
+        }
+        &-contents {
+          margin-left: 6px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding: 0 2px;
+          &-sell { 
+            display: flex;
+            justify-content: space-between;
+            &-name {
+              font-size: 14px;
+              font-weight: bold;
+            }
+            span {
+              font-size: 8px;
+            }
+          }
+          &-text {
+            width: 200px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        } 
+        &:hover {
+          background-color: #28242d;
+        }
+      }
+    }
+  }
+}
+
+// メイン画面
+.main-chat {
+  float: right;
+  width: calc(100vw - 300px);
+  &-header {
+    height: 80px;
+    background-color: #1a1e21;
+    width: calc( 100vw - 300px);
+    color: #D1D2D3;
+    &-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 300px;
+      &-group {
+        padding: 8px 8px 8px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-name {
+          font-weight: bold;
+          font-size: 20px;
+        }
+        &-option {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 3px;
+          i {
+            font-size: 12px;
+            font-weight: lighter;
+          }
+          .line {
+            margin: 0 5px;
+          }
+        }
+      }
+      &-edit {
+        
+      }
+    }
+  }
+  &-chat {
+    border-top: 1px solid #36373C;
+    height: calc(100vh - 80px - 90px);
+    overflow: scroll;
+    background-color: #1a1e21;
+    .messages {
+      padding: 20px;
+      .message {
+        display: flex;
+        width: 100%;
+        margin: 20px 0 ;
+        &:hover {
+          background-color: #232529;
+        }
+        &-image {
+          img {
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+        &-box {
+          margin-left: 6px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .image {
+            margin-top: 10px;
+          }
+          &-box {
+            display: flex;
+            &-name {
+              color: #D1D2D3;
+              font-weight: bold;
+              &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+            &-data {
+              margin-left: 3px;
+              color: #656668;
+              font-size: 14px;
+            }
+          }
+          &-content {
+            width: 600px;
+            color: #c8c8c9;
+            p {
+              word-wrap: break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // フォーム
+  .form {
+    background-color:#222629;
+    height: 90px;
+    padding:20px;
+    .message-box {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      &-text {
+        padding: 0 40px 0 10px;
+        height: 100%;
+        width: 100%;
+        background-color: #36373C;
+        color: #D1D2D3;
+        border-radius: 5px;
+        border: 1px solid white;
+        &:focus {
+          outline: 0;
+        }
+      }
+     .edit-btn {
+       display: block;
+       width: 100px;
+       height: 50px;
+       padding: 0 30px;
+       margin-left: 15px;
+       cursor: pointer;  
+       background-color: #36373C;
+       color: #D1D2D3;
+       border-radius: 5px;
+     }
+    }
+  } 
+
+}

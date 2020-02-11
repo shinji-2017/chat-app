@@ -2,12 +2,9 @@
   .main-chat-header
     .main-chat-header-box
       .main-chat-header-box-group
-        %p.main-chat-header-group-name
+        %p.main-chat-header-box-group-name
           group-name
         .main-chat-header-box-group-option
-          = icon("fa", "star")
-          %span.line
-            |
           = icon("fa", "user")
           %p.integer
             ４
@@ -30,6 +27,7 @@
      
   .form
     .message-box
+      %label 
       %input{placeholder: "groupnameへのメッセージ",class: "message-box-text"}
       %input{type: "submit", value: "送信", class: "edit-btn"}
       

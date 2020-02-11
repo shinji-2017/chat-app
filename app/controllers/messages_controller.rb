@@ -4,8 +4,4 @@ class MessagesController < ApplicationController
     @user = User.new
   end
 
-  def search
-    
-  end
-
 end

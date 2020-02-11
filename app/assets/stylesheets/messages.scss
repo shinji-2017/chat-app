@@ -45,28 +45,7 @@
   .profile-edit {
     text-decoration: none;
   }
-  .profile {
-    width: 250px;
-    padding: 12px 0;
-    background-color: #222429;
-    position: absolute;
-    z-index: 1;
-    display: none;
-    height: 500px;
-    top: 80px;
-    left: 10px;
-    border-radius: 5px;
-    .edit {
-      color: #999A9B;
-      font-size: 20px;
-    }
-    .close-btn {
-      cursor: pointer;
-    }
-    .logout-btn {
-      cursor: pointer;
-    }
-  }
+  
 
   // 検索画面
   &__search {
@@ -158,17 +137,19 @@
     background-color: #1a1e21;
     width: calc( 100vw - 300px);
     color: #D1D2D3;
+    display: flex;
+    justify-content: space-between;
     &-box {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 100%;
-      width: 300px;
+      width: 100%;
       &-group {
+        width: 300px;
         padding: 8px 8px 8px 20px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         &-name {
           font-weight: bold;
@@ -180,16 +161,17 @@
           justify-content: center;
           margin-top: 3px;
           i {
-            font-size: 12px;
+            font-size: 20px;
             font-weight: lighter;
-          }
-          .line {
-            margin: 0 5px;
+            padding-right: 5px;
           }
         }
       }
       &-edit {
-        
+        i {
+          padding-right: 20px;
+          font-size: 20px;
+        }
       }
     }
   }

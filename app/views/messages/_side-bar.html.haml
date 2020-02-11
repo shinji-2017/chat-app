@@ -10,19 +10,11 @@
       -#   .fukidasi-box
       -#     %p.profile
       -#       アカウント編集
-    -# .profile
-    -#   = image_tag "member_photo.png", size: "50x50", class: "profile-image"
-    -#   %p.profile-user
-    -#     = current_user.name
-    -#   .logout-btn
-    -#     = form_for(@user,url: destroy_user_session_path ,method: :delete) do |f|
-    -#       = f.submit "ログアウト", class: "logout-btn"
-    -#   %p.close-btn 閉じる
-    -# .side-bar__search 
-    -#   .side-bar__search-box
-    -#     = icon("fa", "search")
-    -#     %p.side-bar__search-box-value 
-    -#       トークルームとメッセージ検索
+  .side-bar__search 
+    .side-bar__search-box
+      = icon("fa", "search")
+      %p.side-bar__search-box-value 
+        トークルームとメッセージ検索
   -# .side-bar-title
   -#   %P.side-bar-title-talk
   -#     トークルーム

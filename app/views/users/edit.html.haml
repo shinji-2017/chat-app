@@ -1,1 +1,40 @@
-aaaaaaaaa
+.edit-box
+  .profile-page
+    .profile-page__inner
+      %p.profile-page__inner__edit Edit Account
+      = form_for(current_user, url: user_path, method: :patch) do |f|
+        .profile-page__inner-box
+          .profile-page__inner-box-left
+            .field-box
+              %p.field-box-label 氏名
+              = f.text_field :name, class: "input"
+            .field-box
+              %p.field-box-label メールアドレス
+              = f.text_field :email, class: "input"
+          .profile-page__inner-box-mid
+            = image_tag "member_photo.png", size: "200x200", class: "profile-image"
+            = f.label :image , class: ".profile-page__inner-box-mid-image", for: "user_image" do
+              .input 画像をアップロード
+              = f.file_field :image, class: "user-image"
+          .profile-page__inner-box-right
+            = link_to "ログアウト",  destroy_user_session_path, method: :delete , class: "profile-page__inner-box-right-logout"
+            = link_to "トップページに戻る", :back , class: "profile-page__inner-box-right-back "
+            = f.submit "変更を保存する" , class: "profile-page__inner-box-right-update "
+
+
+
+
+
+
+
+
+
+
+    -# -# .profile
+    -# -#   = image_tag "member_photo.png", size: "50x50", class: "profile-image"
+    -# -#   %p.profile-user
+    -# -#     = current_user.name
+    -# -#   .logout-btn
+    -#     = form_for(@user,url: destroy_user_session_path ,method: :delete) do |f|
+    -#       = f.submit "ログアウト", class: "logout-btn"
+    -# -#   %p.close-btn 閉じる

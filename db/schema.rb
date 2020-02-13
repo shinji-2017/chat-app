@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20200210123234) do
 
-  create_table "group_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "image"
-    t.integer  "group_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_group_images_on_group_id", using: :btree
-  end
-
   create_table "group_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "group_id"
     t.integer  "user_id"
@@ -46,26 +38,6 @@ ActiveRecord::Schema.define(version: 20200210123234) do
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
   end
 
-  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                     null: false
-    t.string   "email",                    null: false
-    t.text     "image",      limit: 65535
-    t.text     "message",    limit: 65535
-    t.integer  "user_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.index ["name"], name: "index_profiles_on_name", using: :btree
-    t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
-  end
-
-  create_table "user_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "image"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_images_on_user_id", using: :btree
-  end
-
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                null: false
     t.string   "email",                  default: "", null: false
@@ -81,11 +53,8 @@ ActiveRecord::Schema.define(version: 20200210123234) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "group_images", "groups"
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
-  add_foreign_key "profiles", "users"
-  add_foreign_key "user_images", "users"
 end

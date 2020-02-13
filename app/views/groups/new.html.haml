@@ -1,1 +1,23 @@
-aaaaaaaaaa
+= form_for @group, url: new_group_path, method: :get do |f|
+  .group
+    .group__inner
+      .group__inner-box
+        .group__inner-box-header
+          %p.group__inner-box-header-edit
+            チャットグループを作成
+        .group__inner-box-form
+          .group__inner-box-form-left
+            .field-box
+              %p.field-box-label グループ名
+              = f.text_field :name, class: "input", placeholder: 'グループ名を入力してください'
+            .field-box
+              %p.field-box-label チャットメンバーを追加
+              %input{ placeholder: "追加したいユーザー名を入力してください", class: "input"}
+            .field-box
+              %p.field-box-label チャットメンバー
+              %input{ name: "group[user_ids][]" , class: "input-group"}
+        .group__inner-box-form-bottom
+          .bottom-box
+            = link_to "トップページに戻る", :back, calss: "bottom-box-back"
+            = f.submit "登録" , class: "bottom-box-new"
+            

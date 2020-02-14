@@ -1,0 +1,13 @@
+.message
+  .message-image 
+    = image_tag "member_photo.png", size: "50x50"
+  .message-box
+    .message-box-box
+      .message-box-box-name
+        = message.user.name
+      .message-box-box-data
+        = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    .message-box-content
+      - if message.text.present?
+        = message.text
+    = image_tag message.image.url, size: "200x200", class: "image" if message.image.present?

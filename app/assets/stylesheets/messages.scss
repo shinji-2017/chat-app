@@ -110,7 +110,9 @@
       &__chat {
        display: flex;
        justify-content: space-between;
+       align-items: center;
        padding: 10px 8px;
+       height: 100px;
         &-image {
           img {
             border-radius: 50%;
@@ -128,6 +130,10 @@
             &-name {
               font-size: 14px;
               font-weight: bold;
+            }
+            &-time {
+              font-size: 12px;
+              font-weight: 400;
             }
             span {
               font-size: 8px;
@@ -191,6 +197,7 @@
         i {
           padding-right: 20px;
           font-size: 20px;
+          cursor: pointer;
         }
       }
     }
@@ -205,7 +212,7 @@
       .message {
         display: flex;
         width: 100%;
-        margin: 20px 0 ;
+        margin-bottom: 40px;
         &:hover {
           background-color: #232529;
         }
@@ -225,6 +232,8 @@
           }
           &-box {
             display: flex;
+            margin-bottom: 8px;
+            align-items: center;
             &-name {
               color: #D1D2D3;
               font-weight: bold;
@@ -234,7 +243,7 @@
               }
             }
             &-data {
-              margin-left: 3px;
+              margin-left: 5px;
               color: #656668;
               font-size: 14px;
             }
@@ -270,6 +279,18 @@
         border: 1px solid white;
         &:focus {
           outline: 0;
+        }
+      }
+      .form-image {
+        position: relative;
+        .icon {
+          position: absolute;
+          font-size: 30px;
+          top: 10px;
+          right: 10px;
+        }
+        .hidden {
+          display: none;
         }
       }
      .edit-btn {

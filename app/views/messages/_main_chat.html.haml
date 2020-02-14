@@ -3,31 +3,47 @@
     .main-chat-header-box
       .main-chat-header-box-group
         %p.main-chat-header-box-group-name
-          group-name
+          = @group.name
         .main-chat-header-box-group-option
           = icon("fa", "user")
           %p.integer
-            ４
+          = @group.users.count
       .main-chat-header-box-edit
         = icon("fa", "cog")
+  = form_for @group do |f|
+    .group
+      .group__inner
+        .group__inner-box
+          .group__inner-box-header
+            %p.group__inner-box-header-edit
+              チャットグループを編集
+          .group__inner-box-form
+            .group__inner-box-form-left
+              .field-box
+                %p.field-box-label グループ名
+                = f.text_field :name, class: "input", placeholder: 'グループ名を入力してください'
+              .field-box
+                %p.field-box-label チャットメンバーを追加
+                %input{ placeholder: "追加したいユーザー名を入力してください", class: "input"}
+              .field-box
+                %p.field-box-label チャットメンバー
+                -# %input{ name: "group[user_ids][]" , class: "input-group"}
+                =  f.collection_check_boxes :user_ids, User.all, :id , :name
+          .group__inner-box-form-bottom
+            .bottom-box
+              = link_to "トップページに戻る", root_path, calss: "bottom-box-back"
+              = f.submit "編集" , class: "bottom-box-new"
+            
   .main-chat-chat
     .messages 
-      .message
-        .message-image 
-          = image_tag "member_photo.png", size: "50x50"
-        .message-box
-          .message-box-box
-            .message-box-box-name
-              %p shinji
-            .message-box-box-data
-              %p 15:06
-          .message-box-content
-            %p aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-          = image_tag "member_photo.png", size: "200x200", class: "image"
-     
-  .form
-    .message-box
-      %label 
-      %input{placeholder: "groupnameへのメッセージ",class: "message-box-text"}
-      %input{type: "submit", value: "送信", class: "edit-btn"}
-      
+      = render @messages
+  = form_for [@group, @message] do |f|
+    .form
+      .message-box
+        = f.text_field :text, placeholder:"#{@group.name} へのメッセージ",class: "message-box-text"
+        = f.label :image, class: "form-image" do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+        = f.submit "送信" , class: "edit-btn"
+        
+        

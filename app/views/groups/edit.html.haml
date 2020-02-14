@@ -1,12 +1,12 @@
 -# = form_for @group do |f|
--#   .group
--#     .group__inner
--#       .group__inner-box
--#         .group__inner-box-header
--#           %p.group__inner-box-header-edit
--#             チャットグループを作成
--#         .group__inner-box-form
--#           .group__inner-box-form-left
+-#   .groups
+-#     .groups__inner
+-#       .groups__inner-box
+-#         .groups__inner-box-header
+-#           %p.groups__inner-box-header-edit
+-#             チャットグループを編集
+-#         .groups__inner-box-form
+-#           .groups__inner-box-form-left
 -#             .field-box
 -#               %p.field-box-label グループ名
 -#               = f.text_field :name, class: "input", placeholder: 'グループ名を入力してください'
@@ -17,8 +17,8 @@
 -#               %p.field-box-label チャットメンバー
 -#               -# %input{ name: "group[user_ids][]" , class: "input-group"}
 -#               =  f.collection_check_boxes :user_ids, User.all, :id , :name
--#         .group__inner-box-form-bottom
+-#         .groups__inner-box-form-bottom
 -#           .bottom-box
--#             = link_to "トップページに戻る", :back, calss: "bottom-box-back"
--#             = f.submit "登録" , class: "bottom-box-new"
+-#             = link_to "トップページに戻る", root_path, calss: "bottom-box-back"
+-#             = f.submit "編集" , class: "bottom-box-new"
             

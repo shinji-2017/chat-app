@@ -230,6 +230,7 @@
           flex-direction: column;
           .image {
             margin-top: 10px;
+            border-radius: 5px;
           }
           &-box {
             display: flex;
@@ -245,7 +246,7 @@
             }
             &-data {
               margin-left: 5px;
-              color: #656668;
+              color:#9A9A9C;
               font-size: 14px;
             }
           }

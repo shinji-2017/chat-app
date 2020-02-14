@@ -2,7 +2,10 @@
   .side-bar__header
     .side-bar__header__user
       .side-bar__header__user-image
-        = image_tag "member_photo.png", size: "50x50"
+        - if current_user.image.present?
+          = image_tag current_user.image.url, size: "50x50"
+        -else
+          = image_tag "default.jpg", size: "50x50"
       %p.side-bar__header__user-name
         = current_user.name
     -# .fukidasi
@@ -29,7 +32,7 @@
               %p.field-box-label ステータスメッセージ
               = f.text_field :status, class: "input"
           .profile__inner-box-form-right
-            = image_tag "member_photo.png", size: "200x200", class: "profile-image"
+            = image_tag current_user.image.url, size: "200x200", class: "profile-image"
             = f.label :image , class: ".profile-page__inner-box-mid-image", for: "user_image" do
               %p.input 画像をアップロード
               = f.file_field :image, class: "user-image"
@@ -80,13 +83,13 @@
       = link_to group_messages_path(group) , class: "side-bar" do
         .side-bar__chat
           .side-bar__chat-image
-            = image_tag "member_photo.png", size: "50x50"
+            = image_tag "default.jpg", size: "50x50"
           .side-bar__chat-contents
             .side-bar__chat-contents-sell
               %p.side-bar__chat-contents-sell-name
                 = group.name
               %p.side-bar__chat-contents-sell-time
-                = group.messages.last.created_at.strftime("%H時%M分")
+                -# = group.messages.last.created_at.strftime("%H時%M分")
             %P.side-bar__chat-contents-text
               = group.show_last_message
   .add-btn

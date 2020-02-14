@@ -209,7 +209,8 @@
     overflow: scroll;
     background-color: #1a1e21;
     .messages {
-      padding: 20px;
+      padding: 20px 20px 0;
+      overflow: scroll;
       .message {
         display: flex;
         width: 100%;

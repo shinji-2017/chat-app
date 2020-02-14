@@ -6,6 +6,7 @@
   border-radius: 5px;
   display: none;
   top: 0;
+  left: 0;
   z-index: 1;
   &__inner-box {
     width: 700px;
@@ -74,13 +75,13 @@
         display: block;
         .bottom-box {
           display: flex;
-          margin-left: 350px;
+          margin-left: 380px;
           &-new {
             @include edit-form;
             background-color: #138567;
             width: 100px;
           }
-          a {
+          .close-btn {
             @include edit-form;
             background-color: #37AEEF;
           }

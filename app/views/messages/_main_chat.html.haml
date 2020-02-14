@@ -17,6 +17,8 @@
           .group__inner-box-header
             %p.group__inner-box-header-edit
               チャットグループを編集
+            .groups__inner-box-header-close
+              = icon("fas", "times")
           .group__inner-box-form
             .group__inner-box-form-left
               .field-box
@@ -31,12 +33,13 @@
                 =  f.collection_check_boxes :user_ids, User.all, :id , :name
           .group__inner-box-form-bottom
             .bottom-box
-              = link_to "トップページに戻る", root_path, calss: "bottom-box-back"
+              .close-btn キャンセル
               = f.submit "編集" , class: "bottom-box-new"
             
   .main-chat-chat
-    .messages 
+    .messages
       = render @messages
+  
   = form_for [@group, @message] do |f|
     .form
       .message-box

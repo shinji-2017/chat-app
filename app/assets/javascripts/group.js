@@ -2,13 +2,16 @@ $(function(){
   $(".add-btn").on("click", function(){
     $(".groups").css("display", "block")
   })
-  $(".groups__inner-box-header-close").on("click", function(){
-    $(".groups").css("display", "none")
-  })
+
   $(".fa.fa-cog").on("click", function(){
-    $(".groups").css("display", "block")
+    $(".group").css("display", "block")
   })
+  
+$(".fas.fa-times").on("click", function(){
+  $(".group, .groups").css("display", "none")
+})
+
   $(".close-btn").on("click", function(){
-    $(".groups").css("display", "none")
+    $(".groups, .group").css("display", "none")
   })
 })

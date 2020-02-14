@@ -32,7 +32,10 @@
               %p.field-box-label ステータスメッセージ
               = f.text_field :status, class: "input"
           .profile__inner-box-form-right
-            = image_tag current_user.image.url, size: "200x200", class: "profile-image"
+            -if current_user.image.present?
+              = image_tag current_user.image.url, size: "200x200", class: "profile-image"
+            -else
+              = image_tag "default.jpg", size: "200x200", class: "profile-image"
             = f.label :image , class: ".profile-page__inner-box-mid-image", for: "user_image" do
               %p.input 画像をアップロード
               = f.file_field :image, class: "user-image"

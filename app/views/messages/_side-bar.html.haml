@@ -86,7 +86,10 @@
       = link_to group_messages_path(group) , class: "side-bar" do
         .side-bar__chat
           .side-bar__chat-image
-            = image_tag "default.jpg", size: "50x50"
+            - if group.image.present?
+              = image_tag group.image.url, size: "50x50"
+            - else
+              = image_tag "users-group.png", size: "50x50"
           .side-bar__chat-contents
             .side-bar__chat-contents-sell
               %p.side-bar__chat-contents-sell-name

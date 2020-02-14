@@ -5,6 +5,8 @@ class Group < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
+  mount_uploader :image, ImageUploader
+
   def show_last_message
     if (last_message = messages.last).present?
       if last_message.text?

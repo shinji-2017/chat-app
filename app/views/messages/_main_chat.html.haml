@@ -31,6 +31,14 @@
                 %p.field-box-label チャットメンバー
                 -# %input{ name: "group[user_ids][]" , class: "input-group"}
                 =  f.collection_check_boxes :user_ids, User.all, :id , :name
+            .profile__inner-box-form-right
+              -if @group.image.present?
+                = image_tag @group.image.url, size: "200x200", class: "profile-image"
+              -else
+                = image_tag "users-group.png", size: "200x200", class: "profile-image"
+              = f.label :image , class: ".profile-page__inner-box-mid-image", for: "group_image" do
+                %p.input 画像をアップロード
+                = f.file_field :image, class: "user-image"
           .group__inner-box-form-bottom
             .bottom-box
               .close-btn キャンセル

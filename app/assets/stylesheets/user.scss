@@ -88,17 +88,27 @@
           margin-left: 280px;
           .close-btn {
             @include edit-form;
-            background-color: #212529;
+            background-color: #1A1E21;
             border:1px solid #D1D2D3;
             color: #D1D2D3;
+            &:hover {
+              background-color: #222629;
+            }
           }
           &-update {
             @include edit-form;
-            background-color: #138567;
+            background-color: #0A7A5B;
+            &:hover {
+              background-color:#138567;
+            }
+           
           }
           &-logout {
             @include edit-form;
             background-color: #CD2653;
+            &:hover {
+              background-color: #ff0000;
+            }
           }
         }
       }

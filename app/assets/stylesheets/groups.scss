@@ -75,15 +75,23 @@
         display: block;
         .bottom-box {
           display: flex;
-          margin-left: 380px;
+          margin-left: 410px;
           &-new {
             @include edit-form;
-            background-color: #138567;
+            background-color: #0A7A5B;
             width: 100px;
+            &:hover {
+              background-color: #138567;
+            }
           }
           .close-btn {
             @include edit-form;
-            background-color: #37AEEF;
+            background-color: #1A1E21;
+            border:1px solid #D1D2D3;
+            color: #D1D2D3;
+            &:hover {
+              background-color: #222629;
+            }
           }
         }
       }
@@ -175,12 +183,20 @@
           }
           &-new {
             @include edit-form;
-            background-color: #138567;
+            background-color: #0A7A5B;
             width: 100px;
+            &:hover {
+              background-color: #138567;
+            }
           }
-          a {
+          .close-btn {
             @include edit-form;
-            background-color: #37AEEF;
+            background-color: #1A1E21;
+            border:1px solid #D1D2D3;
+            color: #D1D2D3;
+            &:hover {
+              background-color: #222629;
+            }
           }
         }
       }

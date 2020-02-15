@@ -67,9 +67,11 @@ $(function(){
     if($(this).val().length < 1){
       $(".edit-btn").addClass("disabled",true);
       $(".edit-btn").css("background-color", "#36373C")
+      $(".edit-btn").css("color", "#717273")
     }else {
       $(".edit-btn").prop("disabled",false);
       $(".edit-btn").css("background-color", "#138567")
+      $(".edit-btn").css("color", "white")
     }
   })
 

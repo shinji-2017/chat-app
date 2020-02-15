@@ -61,11 +61,23 @@
                 = f.text_field :name, class: "input", placeholder: 'グループ名を入力してください'
               .field-box
                 %p.field-box-label チャットメンバーを追加
-                %input{ placeholder: "追加したいユーザー名を入力してください", class: "input"}
+                %input{ placeholder: "追加したいユーザー名を入力してください", class: "input users",id: "add-user"}
+              .add-users
               .field-box
                 %p.field-box-label チャットメンバー
-                -# %input{ name: "group[user_ids][]" , class: "input-group"}
-                =  f.collection_check_boxes :user_ids, User.all, :id , :name
+                .input-group
+                  %p.input-group-users 
+                    =current_user.name
+                  %input{ name: "group[user_ids][]" ,type: "hidden" ,value: current_user.id} 
+                .add-js-user
+                  - @group.users.each do |user|
+                    - if current_user.name != user.name
+                      .input-group
+                        %p.input-group-users 
+                          = user.name
+                        %input{ name: "group[user_ids][]" ,type: "hidden", value: user.id}
+                        .remove-btn 
+                          削除
           .groups__inner-box-form-bottom
             .bottom-box
               .close-btn

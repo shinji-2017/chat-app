@@ -2,7 +2,7 @@ $(function(){
 
   function buildHTML(message){
     if (message.image) {
-      var html = `<div class="message" data-message-id=${message.id}>
+      var html = `<div class="message" data-id=${message.id}>
                   <div class="message-image">
                   <img src=${message.user_image} alt="Default" width="50" height="50">
                   </div>
@@ -22,7 +22,7 @@ $(function(){
                   </div>
                   </div>`
     }else {
-      var html = `<div class="message" data-message-id=${message.id}>
+      var html = `<div class="message" data-id=${message.id}>
                   <div class="message-image">
                   <img src=${message.user_image} alt="Default" width="50" height="50">
                   </div>
@@ -75,23 +75,21 @@ $(function(){
     }
   })
 
-  $(function(){
     let reloadMessages = function(){
-    let last_message_id = $('.message:last').data("message-id");
+    let last_message_id = $('.message:last').data("id");
     $.ajax({
       url: "api/messages",
-      type: "GET",
+      type: "get",
       dataType: "json",
       data: {id: last_message_id}
       })
       .done(function(messages){
-        if (messages.length !== 0) {
-          $.each(messages, function(i, message){
-            let html =  buildHTML(message);
-            $(".messages").append(html);
-          });
-          $(".main-chat-chat").animate({scrollTop:$(".main-chat-chat")[0].scrollHeight});
-        }
+        messages.forEach(function(message){
+          buildHTML(message);
+          let html = buildHTML(message);
+          $(".messages").append(html);
+          $('.main-chat-chat').animate({ scrollTop: $('.main-chat-chat')[0].scrollHeight});
+        });
       })
      .fail(function(){
        alert("error");
@@ -100,5 +98,4 @@ $(function(){
     if(location.pathname.match(/messages/)){
       setInterval(reloadMessages, 7000);
     }
-  });
 });

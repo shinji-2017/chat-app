@@ -59,13 +59,18 @@ $(function(){
       $(".messages").append(html);
       $('.new_message')[0].reset();
       $('.main-chat-chat').animate({ scrollTop: $('.main-chat-chat')[0].scrollHeight});
-    })
-    .fail(function(){
-      alert("error");
-    })
-    .always(function(){
-      $(".edit-btn").removeAttr("disabled")
+      $(".edit-btn").css("background-color", "#36373C")
     })
   });
+
+  $(".message-box-text").on(" input", function(){
+    if($(this).val().length < 1){
+      $(".edit-btn").addClass("disabled",true);
+      $(".edit-btn").css("background-color", "#36373C")
+    }else {
+      $(".edit-btn").prop("disabled",false);
+      $(".edit-btn").css("background-color", "#138567")
+    }
+  })
 
 });

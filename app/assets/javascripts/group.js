@@ -3,7 +3,7 @@ $(function(){
     $(".groups").css("display", "block")
   })
 
-  $(".fa.fa-cog").on("click", function(){
+  $(".fas.fa-users-cog").on("click", function(){
     $(".group").css("display", "block")
   })
   

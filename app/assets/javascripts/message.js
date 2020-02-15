@@ -1,4 +1,5 @@
 $(function(){
+
   function buildHTML(message){
     if (message.image) {
       var html = `<div class="message" data-message-id=${message.id}>
@@ -20,8 +21,6 @@ $(function(){
                   <img class="image" src=${message.image} width="200" height="200">
                   </div>
                   </div>`
-                  return html;
-                 
     }else {
       var html = `<div class="message" data-message-id=${message.id}>
                   <div class="message-image">
@@ -39,9 +38,10 @@ $(function(){
                   <div class="message-box-content">
                   ${message.text}
                   </div>`
-                  return html;
     }
+    return html
   }
+
   $('#new_message').on('submit', function(e){
     e.preventDefault()
     var formdata = new FormData(this);
@@ -75,4 +75,30 @@ $(function(){
     }
   })
 
+  $(function(){
+    let reloadMessages = function(){
+    let last_message_id = $('.message:last').data("message-id");
+    $.ajax({
+      url: "api/messages",
+      type: "GET",
+      dataType: "json",
+      data: {id: last_message_id}
+      })
+      .done(function(messages){
+        if (messages.length !== 0) {
+          $.each(messages, function(i, message){
+            let html =  buildHTML(message);
+            $(".messages").append(html);
+          });
+          $(".main-chat-chat").animate({scrollTop:$(".main-chat-chat")[0].scrollHeight});
+        }
+      })
+     .fail(function(){
+       alert("error");
+     })
+    }
+    if(location.pathname.match(/messages/)){
+      setInterval(reloadMessages, 7000);
+    }
+  });
 });

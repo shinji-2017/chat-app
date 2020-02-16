@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+.sign-in {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color:rgba(0,0,0,.6);
+  &-inner {
+    background-color:rgba(0,0,0,.6);
+    width: 700px;
+    margin: auto;
+    border: 1px solid #292A2C;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    left: 0;
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+      padding: 10px;
+    }
+    .input {
+      @include input;
+      width: 300px;
+      margin: 0 0 10px;
+    }
+    .font {
+      @include font;
+      display: block;
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0 40px;
+      .submit {
+        @include edit-form;
+        display: block;
+        width: 200px;
+        background-color: #0A7A5B;
+        
+        &:hover {
+          background-color: #138567;
+        }
+      }
+      .new-user{
+        @include edit-form;
+        display: block;
+        width: 200px;
+        background-color: #38aef0;
+      }
+    }
+  }
+}

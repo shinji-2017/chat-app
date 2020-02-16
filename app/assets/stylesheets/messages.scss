@@ -82,28 +82,27 @@
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    &-box {
+    position: relative;
+    &-form {
+      color: #D1D2D3;
+      padding: 5px;
+      border:none;
+      outline: 0;
       height: 30px;
-      position: relative;
       border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       background-color: #39393e;
       width: 250px;
       cursor: pointer;
-      & i {
-        position: absolute;
-        right: 15px;
-        top: 7px;
-      }
-      &-value {
-        text-align: center;
-        margin-left: 6px;
-      font-size: 14px;
-      }
       &:hover {
         background-color: #454448;
+      }
+    }
+    &-icon {
+      i {
+        position: absolute;
+        right: 40px;
+        bottom: 18px;
+        pointer-events: none;
       }
     }
   }

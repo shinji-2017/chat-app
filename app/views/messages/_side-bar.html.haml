@@ -85,11 +85,14 @@
               = f.submit   class: "bottom-box-new"
             
        
-  .side-bar__search 
-    .side-bar__search-box
+  .side-bar__search
+    %input{placeholder: " メッセージ検索", class: "side-bar__search-form"} 
+    .side-bar__search-icon
       = icon("fa", "search")
-      %p.side-bar__search-box-value 
-        トークルームとメッセージ検索
+    -#   %p.side-bar__search-box-value 
+    -#     トークルームとメッセージ検索
+
+
   -# .side-bar-title
   -#   %P.side-bar-title-talk
   -#     トークルーム

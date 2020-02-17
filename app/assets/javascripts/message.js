@@ -24,7 +24,7 @@ $(function(){
     }else {
       var html = `<div class="message" data-id=${message.id}>
                   <div class="message-image">
-                  <img src=${message.user_image} alt="Default" width="50" height="50">
+                  <img src="/assets/default-224a733c50d48aba6d9fdaded809788bbeb5ea5f6d6b8368adaebb95e58bcf53.jpg" alt="Default" width="50" height="50">
                   </div>
                   <div class="message-box">
                   <div class="message-box-box">

@@ -44,19 +44,17 @@ $(function(){
       $(".side-bar-chat").empty();
       if (groups.length !== 0) {
         appendHit(groups)
-      } else {
-
       }
       if (groups.length !== 0) {
         groups.forEach(function(group){
           appendGroup(group);
         });
-      }else if(input.length === 0) {
-        $(".side-bar-chat").empty()
       } else {
         appendNoGroup("一致するグループがありません");
       } 
-      $(".side-bar__chat-contents-sell").css("color", "red") 
+      if (input === '') {
+        $(".side-bar-chat").empty();
+      }
     })
     .fail(function(){
       console.log("失敗");

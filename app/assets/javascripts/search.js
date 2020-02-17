@@ -71,6 +71,9 @@ $(function(){
         });
       } else {
         appendNoGroup("一致するグループがありません");
+      } 
+      if (input === '') {
+        $(".side-bar-chat").empty();
       }
     })
     .fail(function(){

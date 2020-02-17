@@ -86,16 +86,10 @@
             
        
   .side-bar__search
-    %input{placeholder: " メッセージ検索", class: "side-bar__search-form"} 
+    %input{placeholder: " グループ検索", class: "side-bar__search-form"} 
     .side-bar__search-icon
       = icon("fa", "search")
-    -#   %p.side-bar__search-box-value 
-    -#     トークルームとメッセージ検索
 
-
-  -# .side-bar-title
-  -#   %P.side-bar-title-talk
-  -#     トークルーム
   .side-bar-chat
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) , class: "side-bar" do
@@ -110,7 +104,6 @@
               %p.side-bar__chat-contents-sell-name
                 = group.name
               %p.side-bar__chat-contents-sell-time
-                -# = group.messages.last.created_at.strftime("%H時%M分")
             %P.side-bar__chat-contents-text
               = group.show_last_message
 

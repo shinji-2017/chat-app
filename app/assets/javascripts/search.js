@@ -1,10 +1,10 @@
 $(function(){
 
   function appendGroup(group) {
-    if (group ) {
+    // if (group ) {
       let html = `<a class="side-bar" href="/groups/${group.id}/messages"><div class="side-bar__chat">
                   <div class="side-bar__chat-image">
-                  <img src="${group_image}" alt="Google.jpg"  value=" " width="50" height="50">
+                  <img src=${group_image} alt="Google.jpg" width="50" height="50">
                   </div>
                   <div class="side-bar__chat-contents">
                   <div class="side-bar__chat-contents-sell">
@@ -19,8 +19,8 @@ $(function(){
                   </div>
                   </div>
                   </a>`
-      return html;
-    };
+      $(".side-bar-chat").append(html);
+    // }
   }
 
   function appendNoGroup(msg) {
@@ -37,12 +37,11 @@ $(function(){
       dataType: 'json'
     })
     .done(function(groups){
-      var insertHTML = '';
+      console.log(groups)
       $(".side-bar-chat").empty();
       if (groups.length !== 0) {
         groups.forEach(function(group){
-          insertHTML += appendGroup(group);
-          $(".side-bar-chat").append(insertHTML);
+          appendGroup(group);
         });
       }
       else {

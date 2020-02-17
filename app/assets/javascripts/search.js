@@ -1,9 +1,10 @@
 $(function(){
 
   function appendGroup(group) {
-    // if (group ) {
+    if (group.group_image) {
       let html = `<a class="side-bar" href="/groups/${group.id}/messages"><div class="side-bar__chat">
                   <div class="side-bar__chat-image">
+                  <img class="profile-image" src=${group.group_image} alt="Google" width="50" height="50">
                   </div>
                   <div class="side-bar__chat-contents">
                   <div class="side-bar__chat-contents-sell">
@@ -19,7 +20,26 @@ $(function(){
                   </div>
                   </a>`
       $(".side-bar-chat").append(html);
-    // }
+    }else{
+      let html = `<a class="side-bar" href="/groups/${group.id}/messages"><div class="side-bar__chat">
+                  <div class="side-bar__chat-image">
+                  <img class="profile-image" src="/assets/users-group-7483c255833f482a787991b7717f730e8a46b0336b3a7612f0a46f209a424d61.png" alt="Google" width="50" height="50">
+                  </div>
+                  <div class="side-bar__chat-contents">
+                  <div class="side-bar__chat-contents-sell">
+                  <p class="side-bar__chat-contents-sell-name">
+                  ${group.name}
+                  </p>
+                  <p class="side-bar__chat-contents-sell-time"></p>
+                  </div>
+                  <p class="side-bar__chat-contents-text">
+                  ${group.text}
+                  </p>
+                  </div>
+                  </div>
+                  </a>`
+    $(".side-bar-chat").append(html);
+    }
   }
 
   function appendHit(group) {
@@ -60,5 +80,4 @@ $(function(){
       console.log("失敗");
     });
   })
-  
 });

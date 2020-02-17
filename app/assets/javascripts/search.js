@@ -1,7 +1,7 @@
 $(function(){
 
   function appendGroup(group) {
-    if (group.group_image) {
+    if (group.group_image && group.text) {
       let html = `<a class="side-bar" href="/groups/${group.id}/messages"><div class="side-bar__chat">
                   <div class="side-bar__chat-image">
                   <img class="profile-image" src=${group.group_image} alt="Google" width="50" height="50">
@@ -71,9 +71,6 @@ $(function(){
         });
       } else {
         appendNoGroup("一致するグループがありません");
-      } 
-      if (input === '') {
-        $(".side-bar-chat").empty();
       }
     })
     .fail(function(){

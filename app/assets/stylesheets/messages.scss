@@ -161,12 +161,19 @@
         }
       }
     }
+    .search-result {
+      text-align: center;
+      margin: 20px 0;
+      span{
+        font-weight: bold;
+      }
+    }
   }
 }
 
 .no-group {
   color: #D1D2D3;
-  font-weight: bold;
+  // font-weight: bold;
   font-size: 18px;
   padding: 10px 8px;
   height: 100px;

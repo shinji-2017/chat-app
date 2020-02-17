@@ -4,7 +4,6 @@ $(function(){
     // if (group ) {
       let html = `<a class="side-bar" href="/groups/${group.id}/messages"><div class="side-bar__chat">
                   <div class="side-bar__chat-image">
-                  <img src=${group_image} alt="Google.jpg" width="50" height="50">
                   </div>
                   <div class="side-bar__chat-contents">
                   <div class="side-bar__chat-contents-sell">
@@ -23,6 +22,11 @@ $(function(){
     // }
   }
 
+  function appendHit(group) {
+    let hitGroup = '<div class="search-result"><span>検索結果</span>：' + group.length + '件見つかりました。</div>';
+    $(".side-bar-chat").append(hitGroup);
+  }
+
   function appendNoGroup(msg) {
     var html = `<div class='no-group'>${ msg }</div>`
     $(".side-bar-chat").append(html);
@@ -37,16 +41,22 @@ $(function(){
       dataType: 'json'
     })
     .done(function(groups){
-      console.log(groups)
       $(".side-bar-chat").empty();
+      if (groups.length !== 0) {
+        appendHit(groups)
+      } else {
+
+      }
       if (groups.length !== 0) {
         groups.forEach(function(group){
           appendGroup(group);
         });
-      }
-      else {
+      }else if(input.length === 0) {
+        $(".side-bar-chat").empty()
+      } else {
         appendNoGroup("一致するグループがありません");
-      }  
+      } 
+      $(".side-bar__chat-contents-sell").css("color", "red") 
     })
     .fail(function(){
       console.log("失敗");

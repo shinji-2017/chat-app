@@ -1,7 +1,7 @@
 $(function(){
 
   function appendGroup(group) {
-    if (group.group_image && group.text) {
+    if (group.group_image) {
       let html = `<a class="side-bar" href="/groups/${group.id}/messages"><div class="side-bar__chat">
                   <div class="side-bar__chat-image">
                   <img class="profile-image" src=${group.group_image} alt="Google" width="50" height="50">
@@ -14,7 +14,7 @@ $(function(){
                   <p class="side-bar__chat-contents-sell-time"></p>
                   </div>
                   <p class="side-bar__chat-contents-text">
-                  ${group.text}
+                  
                   </p>
                   </div>
                   </div>
@@ -33,7 +33,7 @@ $(function(){
                   <p class="side-bar__chat-contents-sell-time"></p>
                   </div>
                   <p class="side-bar__chat-contents-text">
-                  ${group.text}
+                
                   </p>
                   </div>
                   </div>

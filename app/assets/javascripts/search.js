@@ -69,7 +69,10 @@ $(function(){
         groups.forEach(function(group){
           appendGroup(group);
         });
-      } else {
+      } else if(input === "") {
+
+      }
+      else {
         appendNoGroup("一致するグループがありません");
       } 
     })

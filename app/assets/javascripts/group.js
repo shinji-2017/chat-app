@@ -14,7 +14,9 @@ $(".fas.fa-times").on("click", function(){
   $(".close-btn").on("click", function(){
     $(".groups, .group").css("display", "none")
   })
-  $(".profile, .group, .groups").on("click", function() {
-      $(".profile, .group, .groups").css("display", "none")
-  })
+  // $(document).on('click touchend', function(event) {
+  //   if (!$(event.target).closest('#target').length) {
+  //     $('.profile, .groups, .gruop').css("display", "none");
+  //   }
+  // });
 })

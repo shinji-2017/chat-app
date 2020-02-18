@@ -1,13 +1,13 @@
 $(function(){
   let startPos = 0
-  let nowScrollTop = 0;
+  let nowPos = 0;
   $(".side-bar-chat").on('scroll',function(){
-      nowScrollTop = $(this).scrollTop();
-      if (nowScrollTop >= startPos) {
-          $('.add-btn').fadeOut(400);
+      nowPos = $(this).scrollTop();
+      if (nowPos >= startPos) {
+          $('.add-btn').fadeOut(300);
       } else {
-        $('.add-btn').fadeIn(400);
+        $('.add-btn').fadeIn(300);
       }
-      startPos = nowScrollTop;
+      startPos = nowPos;
   });
 })

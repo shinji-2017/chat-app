@@ -91,9 +91,6 @@ $(function(){
           $('.main-chat-chat').animate({ scrollTop: $('.main-chat-chat')[0].scrollHeight});
         });
       })
-     .fail(function(){
-       alert("error");
-     })
     }
     if(location.pathname.match(/messages/)){
       setInterval(reloadMessages, 7000);

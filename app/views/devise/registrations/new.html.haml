@@ -21,7 +21,7 @@
           = f.submit "登録", class:"submit"
           .line
           - if controller_name != 'sessions'
-            = link_to "ログイン画面へ", new_session_path(resource_name), class: "new-user"
+            = link_to "ログイン画面", new_session_path(resource_name), class: "new-user"
             %br/
 
     = render "devise/shared/links"

@@ -69,6 +69,36 @@
           = f.file_field :image, class: 'hidden'
         = f.submit "送信" , class: "edit-btn"
 
-.right-user
+  .right-user
+    .show-header
+      %p.show-header-textこのグループについて 
+      = icon("fa", "times")
+    %ul.group-show
+      %li.sell
+        %p.sell-text
+          グループ詳細
+        %span ▶︎
+        = icon("fas", "info-circle")
+      %li.sell.users
+        %p.sell-text
+          = "#{@group.users.count}人のメンバー"
+        %span ▶︎
+        = icon("fas", "user")
+        .answer
+          - @group.users.each do |user|
+            .answer-box 
+              .user-box
+                .user-box-image
+                  -if user.image.present?
+                    = image_tag user.image, size: "40x40", class: "user-image-info"
+                  - else
+                    = image_tag "default.jpg", size: "40x40", class: "user-image-info"
+                .user-box-name
+                  = user.name
+
+
+       
+
+
         
         

@@ -27,8 +27,8 @@
   border: solid 1px #D1D2D3;
   color: #D1D2D3;
   background-color: #1A1E21;
-  padding: 5px;
-  font-size: 18px;
+  padding: 10px;
+  font-size: 14px;
 }
 
 // サイドバー
@@ -183,7 +183,7 @@
 
 // メイン画面
 .main-chat {
-  float: right;
+  float: left;
   width: calc(100vw - 300px);
   &-header {
     height: 80px;
@@ -199,7 +199,7 @@
       height: 100%;
       width: 100%;
       &-group {
-        width: 300px;
+
         padding: 8px 8px 8px 20px;
         display: flex;
         justify-content: space-between;
@@ -212,7 +212,11 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 3px;
+          margin-left: 30px;
+          cursor: pointer;
+          &:hover {
+            color: #1C90C2;
+          }
           i {
             font-size: 20px;
             font-weight: lighter;
@@ -225,6 +229,9 @@
           padding-right: 20px;
           font-size: 25px;
           cursor: pointer;
+          &:hover {
+            color: #1C90C2;
+          }
         }
       }
     }

@@ -5,56 +5,88 @@
 .sign-in {
   width: 100vw;
   height: 100vh;
-  position: relative;
   background-color:rgba(0,0,0,.6);
+  .title {
+    text-align: center;
+    width: 100vw;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 40px 0;
+    margin: 0 auto;
+    font-family:Comic Sans MS;
+  }
   &-inner {
     background-color:rgba(0,0,0,.6);
-    width: 700px;
+    width: 400px;
     margin: auto;
-    border: 1px solid #292A2C;
     text-align: center;
-    position: absolute;
-    top: 10%;
-    right: 0;
-    left: 0;
-    .title {
-      font-size: 30px;
-      font-weight: bold;
-      padding: 10px;
-    }
-    .input {
-      @include input;
-      width: 300px;
-      margin: 0 0 10px;
-    }
-    .font {
-      @include font;
-      display: block;
-      margin-top: 10px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 40px 0 40px;
-      .submit {
-        @include edit-form;
+    &-box {
+      padding: 25px 40px;
+      border: 1px solid #292A2C;
+      border-radius: 5px;
+      .new-account {
+        font-weight: bold;
+        font-size: 16px;
+        margin: 10px 0 25px;
+      }
+      #sign-in-form {
+        position: relative;
+        i {
+          position: absolute;
+          left: 15px;
+          top: 10px;
+          font-size: 20px;
+          pointer-events: none;
+        }
+      }
+      .input {
+        @include input;
+        width: 300px;
+        margin: 0 0 20px;
+        padding-left: 40px;
+        width: 100%;
+        &:focus {
+          border: 1px solid #38aef0;
+        }
+  
+      }
+      .font {
+        @include font;
         display: block;
-        width: 200px;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+       
+      }
+      .submit {
+        border: none;
+        display: block;
         background-color: #0A7A5B;
-        
+        width: 100%;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        color: white;
+        margin-bottom: 30px;
         &:hover {
           background-color: #138567;
         }
       }
+      .line {
+        border: 1px solid #d1d1d1;
+        margin: 30px 0;
+      }
       .new-user{
-        @include edit-form;
         display: block;
-        width: 200px;
-        background-color: #38aef0;
+        color: #1D9BD2;
+        text-decoration: none;
+        text-align: right;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
+   
   }
 }

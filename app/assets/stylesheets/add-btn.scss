@@ -10,6 +10,9 @@
   bottom: 30px;
   left : 200px;
   cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
   i {
     margin-top: 20px;
     font-size: 30px;

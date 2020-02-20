@@ -1,31 +1,27 @@
 .sign-in
+  %h2.title Chat app
   .sign-in-inner 
-    %h2.title 新規登録
-    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-      = render "devise/shared/error_messages", resource: resource
-      .field
-        = f.label :name , class: "font"
-        %br/
-        =  f.text_field  :name, autofocus: true, autocomplete: "name", class: "input"
-      .field
-        = f.label :email, class: "font"
-        %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email", class: "input"
-      .field
-        = f.label :password, class: "font"
-        - if @minimum_password_length
-          %em
-            (#{@minimum_password_length} 文字以上)
-        %br/
-        = f.password_field :password, autocomplete: "new-password", class: "input"
-      .field
-        = f.label :password_confirmation, class: "font"
-        %br/
-        = f.password_field :password_confirmation, autocomplete: "new-password", class: "input"
-      .actions
-        = f.submit "登録", class:"submit"
-        - if controller_name != 'sessions'
-          = link_to "ログイン画面へ", new_session_path(resource_name), class: "new-user"
-          %br/
+    .sign-in-inner-box
+      %p.new-account
+        アカウントを作成
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .field#sign-in-form
+          =  f.text_field  :name, autofocus: true, autocomplete: "name", class: "input",placeholder: "名前を入力"
+          = icon("fa", "user")
+        .field#sign-in-form
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: "input",placeholder: "メールアドレスを入力"
+          = icon("fas", "envelope")
+        .field#sign-in-form
+          = f.password_field :password, autocomplete: "new-password", class: "input",placeholder: "パスワードを入力 (６文字以上)"
+          = icon("fa", "lock")
+        .field#sign-in-form
+          = f.password_field :password_confirmation, autocomplete: "new-password", class: "input",placeholder: "パスワードを再入力"
+          = icon("fa", "lock")
+          = f.submit "登録", class:"submit"
+          .line
+          - if controller_name != 'sessions'
+            = link_to "ログイン画面へ", new_session_path(resource_name), class: "new-user"
+            %br/
 
     = render "devise/shared/links"

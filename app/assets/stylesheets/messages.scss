@@ -238,13 +238,14 @@
   }
   &-chat {
     height: calc(100vh - 80px - 90px);
-    width: calc(100vw - 300px);
+    width: 100vw;
     overflow: scroll;
     background-color: #1a1e21;
     display: flex;
     .messages {
       padding: 20px 20px 0;
       overflow: scroll;
+      width: 100%;
       .message {
         display: flex;
         width: 100%;

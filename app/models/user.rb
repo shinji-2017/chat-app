@@ -9,4 +9,7 @@ class User < ApplicationRecord
   has_many :groups, through: :group_users
 
   mount_uploader :image, ImageUploader
+
+  validates :name , presence: true
+  validates :email, presence: true, uniqueness: true
 end

@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    user_id = params[:id].to_s
+    user_id = params[:id]
     @user = User.where(id: user_id)
     respond_to do |format|
       format.html

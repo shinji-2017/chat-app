@@ -41,6 +41,26 @@ $(function(){
                     </p>
                     </div>`
         return html;
+    } else if (user.user_status) {
+      let html = `<div class="user-show-image">
+                  <img src="/assets/default-224a733c50d48aba6d9fdaded809788bbeb5ea5f6d6b8368adaebb95e58bcf53.jpg" alt="Default" width="298" height="298">
+                  <i id="close-show" class="fa fa-times"></i>
+                  </div>
+                  <div class="user-show-name">
+                  <p class="user-show-name-text">
+                  名前
+                  </p>
+                  ${user.user_name}
+                  </div>
+                  <div class="user-show-status">
+                  <p class="user-show-status-text">
+                  ステータスメッセージ
+                  </p>
+                  <p class="user-show-status-show">
+                  ${user.user_status}
+                  </p>
+                  </div>`
+      return html;
     }else {
       let html = `<div class="user-show-image">
                   <img src="/assets/default-224a733c50d48aba6d9fdaded809788bbeb5ea5f6d6b8368adaebb95e58bcf53.jpg" alt="Default" width="298" height="298">

@@ -1,12 +1,12 @@
 .message{data:{id:message.id}}
-  .message-image 
+  .message-image{data:{user_id:message.user.id}}
     - if message.user.image.url.present?
       = image_tag message.user.image.url, size: "50x50"
     - else
       = image_tag "default.jpg", size: "50x50"
   .message-box
     .message-box-box
-      .message-box-box-name
+      .message-box-box-name{data:{user_id:message.user.id}}
         = message.user.name
       .message-box-box-data
         = message.created_at.strftime("%Y年%m月%d日 %H時%M分")

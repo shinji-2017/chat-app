@@ -1,7 +1,7 @@
 $(function(){
 
   function buildHTML(message){
-    if (message.image) {
+    if (message.image && message.user_image) {
       var html = `<div class="message" data-id=${message.id} data-user-id=${message.user_id}>
                   <div class="message-image">
                   <img src=${message.user_image} alt="Default" width="50" height="50">
@@ -20,6 +20,43 @@ $(function(){
                   </div>
                   <img class="image" src=${message.image} width="200" height="200">
                   </div>
+                  </div>`
+    }else if (message.image !== null && message.user_image === null) {
+      var html = `<div class="message" data-id=${message.id} data-user-id=${message.user_id}>
+                  <div class="message-image">
+                  <img src="/assets/default-224a733c50d48aba6d9fdaded809788bbeb5ea5f6d6b8368adaebb95e58bcf53.jpg" alt="Default" width="50" height="50">
+                  </div>
+                  <div class="message-box">
+                  <div class="message-box-box">
+                  <div class="message-box-box-name">
+                  ${message.user_name}
+                  </div>
+                  <div class="message-box-box-data">
+                  ${message.created_at}
+                  </div>
+                  </div>
+                  <div class="message-box-content">
+                  ${message.text}
+                  </div>
+                  <img class="image" src=${message.image} width="200" height="200">
+                  </div>
+                  </div>`
+    }else if (message.image === null && message.user_image !== null) {
+      var html = `<div class="message" data-id=${message.id} data-user-id=${message.user_id}>
+                  <div class="message-image">
+                  <img src=${message.user_image} alt="Default" width="50" height="50">
+                  </div>
+                  <div class="message-box">
+                  <div class="message-box-box">
+                  <div class="message-box-box-name">
+                  ${message.user_name}
+                  </div>
+                  <div class="message-box-box-data">
+                  ${message.created_at}
+                  </div>
+                  </div>
+                  <div class="message-box-content">
+                  ${message.text}
                   </div>`
     }else {
       var html = `<div class="message" data-id=${message.id} data-user-id=${message.user_id}>

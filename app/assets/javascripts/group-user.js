@@ -61,8 +61,8 @@ $(function(){
                     <p class="user-show-status-text">
                     ステータスメッセージ
                     </p>
-                    <p class="user-show-status-show">
-                    未記入
+                    <p class="user-show-status-show edit">
+                    ステータスを設定
                     </p>
                     </div>
                     <div class="user-show-edit">

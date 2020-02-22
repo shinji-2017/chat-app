@@ -13,4 +13,8 @@ $(function(){
     $(".profile").css("display", "block")
     $(".user-show").css("display", "none")
   })
+  $(document).on("click", ".user-show-status-show.edit", function(){
+    $(".profile").css("display", "block")
+    $(".user-show").css("display", "none")
+  })
 });

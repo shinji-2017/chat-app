@@ -4,8 +4,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    user_id = params[:id]
-    @user = User.where(id: user_id)
+    @user = User.where(id: params[:keyword])
     respond_to do |format|
       format.html
       format.json

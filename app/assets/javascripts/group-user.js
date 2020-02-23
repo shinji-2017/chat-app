@@ -220,7 +220,7 @@ $(function(){
     $.ajax({
       type: "GET",
       url: url,
-      data: {id: input},
+      data: {keyword: input},
       dataType: "json"
     })
     .done(function(users){

@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
   def index
     @group = Group.new
     @user = Group.where(id: current_user.groups.ids)
-    @groups = Group.where(["name LIKE ?", "%#{params[:keyword]}%"]).where(id: @user.ids)
+    @groups = Group.where(["name LIKE ?", "%#{params[:keyword]}%"]).where(id: @user)
     respond_to do |format|
       format.html
       format.json

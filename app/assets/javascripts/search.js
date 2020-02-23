@@ -65,12 +65,15 @@ $(function(){
       if (groups.length !== 0) {
         appendHit(groups)
       }
+      if (input == '') {
+        $(".search-result").remove()
+      }
       if (groups.length !== 0) {
         groups.forEach(function(group){
           appendGroup(group);
         });
       } else if(input === "") {
-
+       
       }
       else {
         appendNoGroup("一致するグループがありません");

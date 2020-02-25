@@ -103,9 +103,15 @@
             .side-bar__chat-contents-sell
               %p.side-bar__chat-contents-sell-name
                 = group.name
+                .group-user-length
+                  - if group.users.length > 1
+                    = "( #{group.users.length} )"
+                  - else
+            
               %p.side-bar__chat-contents-sell-time
             %P.side-bar__chat-contents-text
               = group.show_last_message
+              
 
   .add-btn
     .add-btn-box

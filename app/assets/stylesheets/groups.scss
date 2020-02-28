@@ -214,6 +214,10 @@
               background-color: #138567;
             }
           }
+          .black {
+            @include edit-form;
+            background-color: #36373C;
+          }
           .close-btn {
             @include edit-form;
             background-color: #1A1E21;

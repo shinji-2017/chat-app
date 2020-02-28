@@ -23,7 +23,7 @@
             .group__inner-box-form-left
               .field-box
                 %p.field-box-label グループ名
-                = f.text_field :name, class: "input", placeholder: 'グループ名を入力してください'
+                = f.text_field :name, class: "input validation", placeholder: 'グループ名を入力してください'
               .field-box
                 %p.field-box-label チャットメンバーを追加
                 %input{ placeholder: "追加したいユーザー名を入力してください", class: "input users",id: "add-user"}
@@ -54,7 +54,7 @@
           .group__inner-box-form-bottom
             .bottom-box
               .close-btn キャンセル
-              = f.submit "編集" , class: "bottom-box-new"
+              = f.submit "編集" , class: "bottom-box-new "
             
   .main-chat-chat
     .messages

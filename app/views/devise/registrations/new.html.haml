@@ -5,19 +5,22 @@
       %p.new-account
         アカウントを作成
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = render "devise/shared/error_messages", resource: resource
         .field#sign-in-form
           =  f.text_field  :name, autofocus: true, autocomplete: "name", class: "input",placeholder: "名前を入力"
           = icon("fa", "user")
+          = render partial: 'devise/shared/error_messages', locals: {user: @user, column: "name"}
         .field#sign-in-form
           = f.email_field :email, autofocus: true, autocomplete: "email", class: "input",placeholder: "メールアドレスを入力"
           = icon("fas", "envelope")
+          = render partial: 'devise/shared/error_messages', locals: {user: @user, column: "email"}
         .field#sign-in-form
           = f.password_field :password, autocomplete: "new-password", class: "input",placeholder: "パスワードを入力 (６文字以上)"
           = icon("fa", "lock")
+          = render partial: 'devise/shared/error_messages', locals: {user: @user, column: "password"}
         .field#sign-in-form
           = f.password_field :password_confirmation, autocomplete: "new-password", class: "input",placeholder: "パスワードを再入力"
           = icon("fa", "lock")
+          = render partial: 'devise/shared/error_messages', locals: {user: @user, column: "password_confirmation"}
           = f.submit "登録", class:"submit"
           .line
           - if controller_name != 'sessions'

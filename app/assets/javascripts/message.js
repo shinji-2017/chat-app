@@ -112,6 +112,18 @@ $(function(){
     }
   })
 
+  $("#message_image").on("change", function(){
+    if ($(this).val() !== null){
+      $(".edit-btn").prop("disabled",false);
+      $(".edit-btn").css("background-color", "#138567")
+      $(".edit-btn").css("color", "white")
+    }else {
+      $(".edit-btn").prop("disabled",true);
+      $(".edit-btn").css("background-color", "#36373C")
+      $(".edit-btn").css("color", "#717273")
+    }
+  })
+
     let reloadMessages = function(){
     let last_message_id = $('.message:last').data("id");
     $.ajax({

@@ -3,7 +3,7 @@ class Group < ApplicationRecord
   has_many :messages
   has_many :users, through: :group_users
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
 
   mount_uploader :image, ImageUploader
 

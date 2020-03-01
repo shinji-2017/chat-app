@@ -39,6 +39,15 @@ class GroupsController < ApplicationController
     end
   end
 
+  def search 
+    @groups = Group.find_by(id: 17)
+    @messages = @groups.messages.where(["text LIKE ?", "%#{params[:keyword]}%"])
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private
   def group_params
     params.require(:group).permit( :image, :name, user_ids: [])

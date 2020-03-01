@@ -8,6 +8,10 @@
           = icon("fa", "user")
           %p.integer
           = @group.users.count
+      .message__search
+        %input{placeholder: " メッセージ検索 (実装中)", class: "message__search-form"} 
+        .message__search-icon
+          = icon("fa", "search")
       .main-chat-header-box-edit
         = icon("fas", "users-cog")
   = form_for @group do |f|

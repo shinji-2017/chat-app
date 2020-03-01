@@ -9,7 +9,7 @@
       .message-box-box-name{data:{user_id:message.user.id}}
         = message.user.name
       .message-box-box-data
-        = message.created_at.strftime("%m月%d日 %H時%M分")
+        = time_ago_in_words(message.created_at)+"前"
     .message-box-content
       - if message.text.present?
         = message.text

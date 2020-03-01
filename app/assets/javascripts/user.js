@@ -30,6 +30,7 @@ $(function(){
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(".add-js-user").append(html);
   }
+  
 
   $(".input.users").on("input", function(){
     let input = $(this).val();

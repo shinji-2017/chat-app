@@ -212,7 +212,7 @@ $(function(){
     }
   })
 
-  $(".message-box-box-name, .message-image, .answer-box").on("click", function(){
+  $(document).on("click",".message-box-box-name, .message-image, .answer-box", function(){
     let input = $(this).data('user-id')
     $(".user-show").empty();
     $(".user-show").css("display", "block")

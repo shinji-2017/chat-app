@@ -3,19 +3,19 @@ $(function(){
   function buildHTML(message){
     if (message.image && message.user_image) {
       var html = `<div class="message" data-id=${message.id} data-user-id=${message.user_id}>
-                  <div class="message-image">
+                  <div class="message-image" data-user-id=${message.user_id}>
                   <img src=${message.user_image} alt="Default" width="50" height="50">
                   </div>
                   <div class="message-box">
                   <div class="message-box-box">
-                  <div class="message-box-box-name">
+                  <div class="message-box-box-name" data-user-id=${message.user_id}>
                   ${message.user_name}
                   </div>
                   <div class="message-box-box-data">
                   ${message.created_at}
                   </div>
                   </div>
-                  <div class="message-box-content">
+                  <div class="message-box-content" >
                   ${message.text}
                   </div>
                   <img class="image" src=${message.image} width="200" height="200">
@@ -23,12 +23,12 @@ $(function(){
                   </div>`
     }else if (message.image !== null && message.user_image === null) {
       var html = `<div class="message" data-id=${message.id} data-user-id=${message.user_id}>
-                  <div class="message-image">
+                  <div class="message-image" data-user-id=${message.user_id}>
                   <img src="/assets/default-224a733c50d48aba6d9fdaded809788bbeb5ea5f6d6b8368adaebb95e58bcf53.jpg" alt="Default" width="50" height="50">
                   </div>
                   <div class="message-box">
                   <div class="message-box-box">
-                  <div class="message-box-box-name">
+                  <div class="message-box-box-name" data-user-id=${message.user_id}>
                   ${message.user_name}
                   </div>
                   <div class="message-box-box-data">
@@ -43,36 +43,36 @@ $(function(){
                   </div>`
     }else if (message.image === null && message.user_image !== null) {
       var html = `<div class="message" data-id=${message.id} data-user-id=${message.user_id}>
-                  <div class="message-image">
+                  <div class="message-image" data-user-id=${message.user_id}>
                   <img src=${message.user_image} alt="Default" width="50" height="50">
                   </div>
                   <div class="message-box">
                   <div class="message-box-box">
-                  <div class="message-box-box-name">
+                  <div class="message-box-box-name" data-user-id=${message.user_id}>
                   ${message.user_name}
                   </div>
                   <div class="message-box-box-data">
                   ${message.created_at}
                   </div>
                   </div>
-                  <div class="message-box-content">
+                  <div class="message-box-content" >
                   ${message.text}
                   </div>`
     }else {
       var html = `<div class="message" data-id=${message.id} data-user-id=${message.user_id}>
-                  <div class="message-image">
+                  <div class="message-image" data-user-id=${message.user_id}>
                   <img src="/assets/default-224a733c50d48aba6d9fdaded809788bbeb5ea5f6d6b8368adaebb95e58bcf53.jpg" alt="Default" width="50" height="50">
                   </div>
                   <div class="message-box">
                   <div class="message-box-box">
-                  <div class="message-box-box-name">
+                  <div class="message-box-box-name" data-user-id=${message.user_id}>
                   ${message.user_name}
                   </div>
                   <div class="message-box-box-data">
                   ${message.created_at}
                   </div>
                   </div>
-                  <div class="message-box-content">
+                  <div class="message-box-content" >
                   ${message.text}
                   </div>`
     }

@@ -47,21 +47,21 @@ $(function(){
 
   $(".group-user__search-form").on("input", function(){
     let input = $(this).val();
+    let url = window.location.pathname;
     $.ajax({
       type: "GET",
-      url: "/users/search",
+      url: url,
       data: {keyword: input},
       dataType: "json"
     })
     .done(function(users){
-      console.log(users)
       $(".group-user-box").empty();
       if (users.length !== 0) {
         appendHit(users)
       }
-      // if (input == '') {
-      //   $(".search-result-user").remove()
-      // }
+      if (input == '') {
+        $(".search-result-user").remove()
+      }
       if (users.length !== 0){
         users.forEach(function(user){
           addUser(user)

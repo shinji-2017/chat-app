@@ -4,7 +4,8 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    @user = User.where(id: params[:keyword])
+    
+    @users = User.where(["name LIKE ?", "%#{params[:keyword]}%"]).where(id: @group.users)
     respond_to do |format|
       format.html
       format.json

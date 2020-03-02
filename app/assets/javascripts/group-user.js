@@ -219,7 +219,7 @@ $(function(){
     let url = window.location.pathname;
     $.ajax({
       type: "GET",
-      url: url,
+      url: "/users/search",
       data: {keyword: input},
       dataType: "json"
     })

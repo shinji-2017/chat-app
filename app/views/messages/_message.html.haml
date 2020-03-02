@@ -12,5 +12,6 @@
         = time_ago_in_words(message.created_at)+"前"
     .message-box-content
       - if message.text.present?
-        = message.text
+        .rinku
+          = raw Rinku.auto_link(message.text, :all, 'target="_blank"') 
     = image_tag message.image.url, size: "200x200", class: "image" if message.image.present?

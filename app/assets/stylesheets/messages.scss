@@ -322,6 +322,16 @@
             p {
               word-wrap: break-word;
             }
+            .rinku {
+              a {
+                color: #1E8FC0;
+                text-decoration: none;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              
+            }
           }
         }
       }

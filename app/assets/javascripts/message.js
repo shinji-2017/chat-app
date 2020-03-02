@@ -97,6 +97,14 @@ $(function(){
       $('.new_message')[0].reset();
       $('.main-chat-chat').animate({ scrollTop: $('.main-chat-chat')[0].scrollHeight});
       $(".edit-btn").css("background-color", "#36373C")
+      // let text = data.text
+      // let group_id = data.group_id
+      // console.log(group_id)
+      // let now_group = $(".side-bar__chat").data("group-id")
+      // // console.log(now_group)
+      // if (group_id == now_group) {
+      //   $(".side-bar__chat-contents-text").text(text);
+      // }
     })
   });
 

@@ -93,7 +93,7 @@
   .side-bar-chat
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) , class: "side-bar" do
-        .side-bar__chat
+        .side-bar__chat{data:{group_id:group.id}}
           .side-bar__chat-image
             - if group.image.present?
               = image_tag group.image.url, size: "50x50"

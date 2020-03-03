@@ -23,7 +23,7 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 - 左上のユーザー名をクリックし、モーダルで編集する
 
   [ユーザー編集](http://3.114.20.168/)
-  ![ユーサー編集](https://gyazo.com/e9ae4940705cfaae335a183c6d040d6c)
+  ![ユーサー編集](https://user-images.githubusercontent.com/53309563/75776402-4d818480-5d97-11ea-9b75-77f1457c5aed.png)
 ####  ユーザー検索機能
 ####  ユーザー一覧機能
 ####  ユーザー詳細機能

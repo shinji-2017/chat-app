@@ -23,7 +23,7 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 
 ###  ユーザー編集機能
  #### 概要
-  - JavaScriptを使用しメール、名前が空の場合編集できないよう実装
+  - JavaScriptを使用し氏名、メールアドレスが空の場合編集できないよう実装
   - 左上のユーザー名をクリックし、モーダルで編集する
 
   [ユーザー編集](http://3.114.20.168/)

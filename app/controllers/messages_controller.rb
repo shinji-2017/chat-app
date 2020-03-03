@@ -10,6 +10,12 @@ class MessagesController < ApplicationController
       format.html
       format.json
     end
+
+    @messages = Message.where(["text LIKE ?", "%#{params[:keyword]}%"]).where(id: @group.messages)
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create

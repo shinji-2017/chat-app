@@ -16,7 +16,9 @@ $(function(){
                   </div>
                   </div>
                   <div class="message-box-content" >
+                  <div class="rinku">
                   ${message.text}
+                  </div>
                   </div>
                   <img class="image" src=${message.image} width="200" height="200">
                   </div>
@@ -36,7 +38,9 @@ $(function(){
                   </div>
                   </div>
                   <div class="message-box-content">
+                  <div class="rinku">
                   ${message.text}
+                  </div>
                   </div>
                   <img class="image" src=${message.image} width="200" height="200">
                   </div>
@@ -56,7 +60,9 @@ $(function(){
                   </div>
                   </div>
                   <div class="message-box-content" >
+                  <div class="rinku">
                   ${message.text}
+                  </div>
                   </div>`
     }else {
       var html = `<div class="message" data-id=${message.id} data-user-id=${message.user_id}>
@@ -73,7 +79,9 @@ $(function(){
                   </div>
                   </div>
                   <div class="message-box-content" >
+                  <div class="rinku">
                   ${message.text}
+                  </div>
                   </div>`
     }
     return html

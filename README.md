@@ -24,6 +24,7 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 
   [ユーザー編集](http://3.114.20.168/)
 ![ユーサー編集](https://user-images.githubusercontent.com/53309563/75775538-86b8f500-5d95-11ea-971a-99e3decbd076.png)
+<img src="https://user-images.githubusercontent.com/53309563/75775538-86b8f500-5d95-11ea-971a-99e3decbd076.png" alt="attach:cat" title="attach:cat" width="200" height="200">
 ####  ユーザー検索機能
 ####  ユーザー一覧機能
 ####  ユーザー詳細機能

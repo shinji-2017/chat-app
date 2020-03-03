@@ -4,12 +4,6 @@ class GroupsController < ApplicationController
   
   def index
     @group = Group.new
-    @user = Group.where(id: current_user.groups.ids)
-    @groups = Group.where(["name LIKE ?", "%#{params[:keyword]}%"]).where(id: @user)
-    respond_to do |format|
-      format.html
-      format.json
-    end
   end
 
   def new
@@ -40,8 +34,9 @@ class GroupsController < ApplicationController
   end
 
   def search 
-    @groups = Group.find_by(id: 17)
-    @messages = @groups.messages.where(["text LIKE ?", "%#{params[:keyword]}%"])
+    # グループ検索
+    @user = Group.where(id: current_user.groups.ids)
+    @groups = Group.where(["name LIKE ?", "%#{params[:keyword]}%"]).where(id: @user)
     respond_to do |format|
       format.html
       format.json

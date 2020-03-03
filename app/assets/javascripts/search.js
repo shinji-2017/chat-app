@@ -56,7 +56,7 @@ $(function(){
     let input = $(this).val();
     $.ajax({
       type: 'GET',
-      url: '/groups',
+      url: '/groups/search',
       data: { keyword: input },
       dataType: 'json'
     })

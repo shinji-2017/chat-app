@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    
+    # ユーザー検索
     @users = User.where(["name LIKE ?", "%#{params[:keyword]}%"]).where(id: @group.users)
     respond_to do |format|
       format.html
@@ -13,6 +13,7 @@ class MessagesController < ApplicationController
   end
 
   def create
+    # メッセージ非同期
     @message = @group.messages.new(message_params)
     if @message.save
       respond_to do |format|

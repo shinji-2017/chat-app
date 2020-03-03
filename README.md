@@ -25,6 +25,8 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
   [ユーザー編集](http://3.114.20.168/)
   ![ユーサー編集](https://user-images.githubusercontent.com/53309563/75776402-4d818480-5d97-11ea-9b75-77f1457c5aed.png)
 ####  ユーザー検索機能
+  [ユーザー]検索(http://3.114.20.168/groups/1/messages
+  ![ユーサー検索](https://user-images.githubusercontent.com/53309563/75776402-4d818480-5d97-11ea-9b75-77f1457c5aed.png)
 ####  ユーザー一覧機能
 ####  ユーザー詳細機能
 ####  グループ編集機能

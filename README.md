@@ -15,7 +15,7 @@
 ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 
 ##  機能一覧
-###  ログイン機能
+####  ログイン機能
 - ユーザー
   - 編集
   - 検索

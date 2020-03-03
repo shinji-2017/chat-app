@@ -26,6 +26,8 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
   ![ユーサー編集](https://user-images.githubusercontent.com/53309563/75776402-4d818480-5d97-11ea-9b75-77f1457c5aed.png)
 ####  ユーザー検索機能
 - ヘッダーのユーザーアイコンをクリックすることでユーザー検索が表示されます
+
+
   [ユーザー検索](http://3.114.20.168/groups/1/messages)
   ![ユーサー検索](https://user-images.githubusercontent.com/53309563/75778244-c6cea680-5d9a-11ea-9d2d-94d75aefa699.png)
 ####  ユーザー一覧機能

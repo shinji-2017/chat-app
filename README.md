@@ -23,6 +23,7 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 - 左上のユーザー名をクリックし、モーダルで編集する
 
   [ユーザー編集](http://3.114.20.168/)
+![ユーサー編集](https://user-images.githubusercontent.com/53309563/75775538-86b8f500-5d95-11ea-971a-99e3decbd076.png)
 ####  ユーザー検索機能
 ####  ユーザー一覧機能
 ####  ユーザー詳細機能

@@ -1,4 +1,4 @@
-##messagesテーブル
+##messagesテ
 
 |Column|Type|Option|
 |------|----|------|

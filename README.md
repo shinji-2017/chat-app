@@ -17,7 +17,7 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 ##  機能一覧
 ###  ログイン機能
 #### 概要
-- Ruby on Railsの”devise”というgemを使用し、機能の実装
+- Ruby on Railsの”devise”というgemを使用し、機能を実装
 
 [ログイン機能](http://3.114.20.168/users)
 

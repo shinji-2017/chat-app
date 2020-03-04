@@ -1,7 +1,7 @@
 #  Chat-app
 
 ##  概要
-SPA(シングルページアプリケーション)でグループチャットアプリを作成しました
+SPA(シングルページアプリケーション)でグループチャットアプリを作成
 
 ##  URL
 [Chat-app](http://3.114.20.168/)
@@ -26,7 +26,7 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
   - JavaScriptを使用し氏名、メールアドレスが空の場合編集できないよう実装
   - 左上のユーザー名をクリックし、モーダルで編集
 
-  [ユーザー編集](http://3.114.20.168/)
+  [ユーザー編集機能](http://3.114.20.168/)
   ![ユーサー編集](https://user-images.githubusercontent.com/53309563/75776402-4d818480-5d97-11ea-9b75-77f1457c5aed.png)
   
 ###  ユーザー検索機能
@@ -34,17 +34,23 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
   - ヘッダーのユーザーアイコンをクリックすることでユーザー検索の欄が表示
   - インクルメンタルサーチでリアルタイムでユーザー検索できるよう実装
 
-  [ユーザー検索](http://3.114.20.168/groups/1/messages)
+  [ユーザー検索機能](http://3.114.20.168/groups/1/messages)
   ![ユーサー検索](https://user-images.githubusercontent.com/53309563/75778933-12358480-5d9c-11ea-94de-db22428f3a46.png)
   
 ###  ユーザー詳細機能
 ### 概要
 - ユーザー名、ユーザー画像をクリックすることでAjaxで表示できるよう実装
 
+ [ユーザー詳細機能](http://3.114.20.168/groups/1/messages)
+ ![ユーサー詳細](https://user-images.githubusercontent.com/53309563/75845812-9f6ced80-5e1d-11ea-8cf4-faa2ac703af9.png)
+
 ###  グループ編集機能
 ### 概要
 - ヘッダー右端にあるアイコンをクリックすることで表示
 - JavaScriptを使用しグループ名がからの場合、編集できないよう実装
+
+ [グループ編集機能](http://3.114.20.168/groups/1/messages)
+ ![グループ編集](https://user-images.githubusercontent.com/53309563/75845997-3174f600-5e1e-11ea-956c-010ceefff726.png)
 
 ###  グループ詳細機能
 ### 概要
@@ -62,7 +68,7 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 ###  メッセージ機能 
 ### 概要
 - メッセージか送信できるよう実装
-- JavaScriptを使用しメッセージかからの場合、送信できないよう実装
+- JavaScriptを使用しメッセージが空の場合、送信できないよう実装
 
 ###  自動スクロール機能
 ### 概要

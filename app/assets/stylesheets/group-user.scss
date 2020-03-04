@@ -6,7 +6,7 @@
   width: 400px;
   height: calc(100vh - 79px);
   float: right;
-  // display: none;
+  display: none;
   position: absolute;
   right: 0;
   top: 79px;
@@ -68,9 +68,6 @@
             font-size: 13px;
             color: #8D8E90;
             margin-bottom: 8px;
-          }
-          &-current {
-
           }
         }
         &-box {

@@ -32,7 +32,7 @@ $(function(){
   function addNoUser() {
     let html = `<div class="answer-box">
                 <div class="user-box-name">
-                ユーザーが見つかりません
+                一致するユーザーがありません
                 </div>
                 </div>
                 </div>`

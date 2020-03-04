@@ -199,7 +199,7 @@ $(function(){
     $(".user-show").css("display", "none")
   })
 
-  $(".sell.users").on("click", function(){
+  $(".sell").on("click", function(){
     let $answer = $(this).find(".answer");
     if($answer.hasClass('open')) { 
       $answer.removeClass('open');

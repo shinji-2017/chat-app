@@ -12,7 +12,9 @@ SPA(シングルページアプリケーション)でグループチャットア
 - 123456
   
 ##  開発環境
-ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
+- ruby : 2.5.1
+- Ruby on Rails : 5.0.7.2
+- jquery-rails : 4.3.3
 
 ##  機能一覧
 

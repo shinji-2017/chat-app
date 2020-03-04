@@ -43,9 +43,8 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
  #### 概要
   - JavaScriptを使用し氏名、メールアドレスが空の場合編集できないよう実装
   - 左上のユーザー名をクリックし、モーダルで編集
-
-  [ユーザー編集機能](http://3.114.20.168/)
 ### URL
+  [ユーザー編集機能](http://3.114.20.168/)
   ![ユーサー編集](https://user-images.githubusercontent.com/53309563/75847044-79494c80-5e21-11ea-9b42-e66b3fe5ce10.png)
   
 ###  ユーザー検索機能

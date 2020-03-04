@@ -19,9 +19,9 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 ###  注意
 - グループ作成機能はこのURLでしか作成できません
 
-[グループ機能](http://3.114.20.168/)
+[グループ作成機能](http://3.114.20.168/)
 
-###  メッセージ機能 
+###  メッセージ送信機能 
 #### 概要
 - メッセージか送信できるよう実装
 - JavaScriptを使用しメッセージが空の場合、送信できないよう実装
@@ -44,7 +44,7 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
   - 左上のユーザー名をクリックし、モーダルで編集
 
   [ユーザー編集機能](http://3.114.20.168/)
-  ![ユーサー編集](https://user-images.githubusercontent.com/53309563/75776402-4d818480-5d97-11ea-9b75-77f1457c5aed.png)
+  ![ユーサー編集](https://user-images.githubusercontent.com/53309563/75847044-79494c80-5e21-11ea-9b42-e66b3fe5ce10.png)
   
 ###  ユーザー検索機能
   #### 概要

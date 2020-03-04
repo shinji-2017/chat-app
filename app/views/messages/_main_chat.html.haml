@@ -69,7 +69,9 @@
   = form_for [@group, @message] do |f|
     .form
       .message-box
-        = f.text_field :text, placeholder:"#{@group.name} へのメッセージ",class: "message-box-text"
+        = f.text_area :text,class: "message-box-text"
+        .placeholder
+          = "#{@group.name} へのメッセージ"
         = f.label :image, class: "form-image" do
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'

@@ -17,7 +17,7 @@ $(function(){
                   </div>
                   <div class="message-box-content" >
                   <div class="rinku">
-                  ${message.text}
+                  ${message.text.replace(/\n|\r\n|\r/g, '<br>')}
                   </div>
                   </div>
                   <img class="image" src=${message.image} width="200" height="200">
@@ -39,7 +39,7 @@ $(function(){
                   </div>
                   <div class="message-box-content">
                   <div class="rinku">
-                  ${message.text}
+                  ${message.text.replace(/\n|\r\n|\r/g, '<br>')}
                   </div>
                   </div>
                   <img class="image" src=${message.image} width="200" height="200">
@@ -61,7 +61,7 @@ $(function(){
                   </div>
                   <div class="message-box-content" >
                   <div class="rinku">
-                  ${message.text}
+                  ${message.text.replace(/\n|\r\n|\r/g, '<br>')}
                   </div>
                   </div>`
     }else {
@@ -80,7 +80,7 @@ $(function(){
                   </div>
                   <div class="message-box-content" >
                   <div class="rinku">
-                  ${message.text}
+                  ${message.text.replace(/\n|\r\n|\r/g, '<br>')}
                   </div>
                   </div>`
     }
@@ -105,6 +105,8 @@ $(function(){
       $('.new_message')[0].reset();
       $('.main-chat-chat').animate({ scrollTop: $('.main-chat-chat')[0].scrollHeight});
       $(".edit-btn").css("background-color", "#36373C")
+      $(".message-box-text").css("height", "50px")
+      $(".placeholder").css("display", "block")
       // let text = data.text
       // let group_id = data.group_id
       // console.log(group_id)
@@ -121,10 +123,12 @@ $(function(){
       $(".edit-btn").prop("disabled",true);
       $(".edit-btn").css("background-color", "#36373C")
       $(".edit-btn").css("color", "#717273")
+      $(".placeholder").css("display", "block")
     }else {
       $(".edit-btn").prop("disabled",false);
       $(".edit-btn").css("background-color", "#138567")
       $(".edit-btn").css("color", "white")
+      $(".placeholder").css("display", "none")
     }
   })
 

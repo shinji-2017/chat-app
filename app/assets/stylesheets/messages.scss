@@ -351,32 +351,48 @@
   // フォーム
   .form {
      width: calc(100vw - 300px);
-    background-color:#222629;
+    background-color:#1a1e21;
     height: 90px;
     padding:20px;
     .message-box {
+      position: relative;
       display: flex;
       justify-content: center;
       height: 100%;
+      width: 100%;
+      
       &-text {
-        padding: 0 40px 0 10px;
+        line-height: 22px;
+        position: absolute;
+        padding: 13px 60px 13px 40px;
         height: 100%;
-        width: 100%;
+        width: calc(100% - 120px);
         background-color: #36373C;
         color: #D1D2D3;
         border-radius: 5px;
         border: 1px solid white;
+        bottom: 0;
+        left: 0;
+        resize: none;
         &:focus {
           outline: 0;
         }
       }
+      .placeholder {
+        position: absolute;
+        color: #8D8E90;
+        font-size: 18px;
+        top: 10px;
+        left: 40px;
+        pointer-events: none;
+      }
       .form-image {
-        position: relative;
+        
         .icon {
           position: absolute;
           font-size: 30px;
           top: 10px;
-          right: 10px;
+          right: 130px;
           cursor: pointer;
         }
         .hidden {
@@ -384,6 +400,7 @@
         }
       }
      .edit-btn {
+       position: absolute;
        display: block;
        width: 100px;
        height: 50px;
@@ -394,6 +411,7 @@
        color: #717273;
        border-radius: 5px;
        font-weight: bold;
+       right: 0;
      }
     }
   } 

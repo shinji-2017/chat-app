@@ -15,7 +15,7 @@ SPA(シングルページアプリケーション)でグループチャットア
 - MacOS
 - ruby : 2.5.1
 - Ruby on Rails : 5.0.7.2
-- jquery-rails : 4.3.3
+- jquery-rails : 1.12.4
 
 ##  機能一覧
 

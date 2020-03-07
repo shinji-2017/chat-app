@@ -107,19 +107,12 @@ $(function(){
       $(".edit-btn").css("background-color", "#36373C")
       $(".message-box-text").css("height", "50px")
       $(".placeholder").css("display", "block")
-      // let text = data.text
-      // let group_id = data.group_id
-      // console.log(group_id)
-      // let now_group = $(".side-bar__chat").data("group-id")
-      // // console.log(now_group)
-      // if (group_id == now_group) {
-      //   $(".side-bar__chat-contents-text").text(text);
-      // }
     })
   });
 
-  $(".message-box-text").on(" input", function(){
-    if($(this).val().length < 1){
+  $(".message-box-text").on("keyup", function(){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if($(this).val().length < 1 || keycode == '13'){
       $(".edit-btn").prop("disabled",true);
       $(".edit-btn").css("background-color", "#36373C")
       $(".edit-btn").css("color", "#717273")
@@ -131,6 +124,8 @@ $(function(){
       $(".placeholder").css("display", "none")
     }
   })
+
+  
 
   $("#message_image").on("change", function(){
     if ($(this).val() !== null){

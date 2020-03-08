@@ -12,10 +12,20 @@ SPA(シングルページアプリケーション)でグループチャットア
 - 123456
   
 ##  開発環境
-- MacOS
-- ruby : 2.5.1
-- Ruby on Rails : 5.0.7.2
-- jquery-rails : 1.12.4
+- 開発言語
+  - HTML, CSS, JavaScript,Ruby
+- フレームワーク
+  - Ruby on Rails
+- データベース
+  - MySQL
+- ソースコード 管理
+  - GitHub
+- インフラ
+  - AWS
+- os
+  -  MacOS
+- エディター
+  Visual Studio Code
 
 ##  機能一覧
 

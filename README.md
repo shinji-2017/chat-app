@@ -13,7 +13,7 @@ SPA(シングルページアプリケーション)でグループチャットア
   
 ##  開発環境
 - 開発言語
-  - HTML, CSS, JavaScript,Ruby
+  - HTML, CSS, JavaScript, Ruby, jQuery
 - フレームワーク
   - Ruby on Rails
 - データベース
@@ -23,9 +23,9 @@ SPA(シングルページアプリケーション)でグループチャットア
 - インフラ
   - AWS
 - os
-  -  MacOS
+  - MacOS
 - エディター
-  Visual Studio Code
+  - Visual Studio Code
 
 ##  機能一覧
 

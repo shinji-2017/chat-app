@@ -210,6 +210,10 @@
         &-name {
           font-weight: bold;
           font-size: 20px;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }
         }
         &-option {
           display: flex;

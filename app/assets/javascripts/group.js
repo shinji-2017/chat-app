@@ -4,7 +4,7 @@ $(function(){
     $(".user-show").css("display", "none")
   })
 
-  $(".fas.fa-users-cog").on("click", function(){
+  $(".fas.fa-users-cog ,.main-chat-header-box-group-name").on("click", function(){
     $(".group").css("display", "block")
     $(".user-show").css("display", "none")
   })
